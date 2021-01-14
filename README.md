@@ -19,9 +19,9 @@ To be more aggressive and improve the efficiency of training, the timing of allo
 iii. Loss Functions and Updating scheme
 Loss function: Mean Square Error
 
-loss=MSE((R+γ max⁡〖Q ̂(s^',a',ω)〗 ),Q ̂(s,a,ω))
+loss = MSE( ( R + γ max⁡(Q(s',a',ω)) ) , Q(s,a,ω) )
 
-where R is the current reward,  is the discount factor, s^'is the next state a^'is the next actions and  is the parameters of the network. 
+where R is the current reward, γ is the discount factor, s'is the next state a'is the next actions and ω is the parameters of the network. 
 Update the policy network when the environment offered rewards after the discount rewards were allocated. This could reduce the training time by avoiding too frequent backward pass of the network and keeping the meaningful updates. Target Network was updated every 10 episodes. 
 
 iv. Positive Reward Boosted Experience Replay
